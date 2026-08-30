@@ -1,4 +1,4 @@
-const API_BASE = "https://numerology-ai-insights-demo.onrender.com";
+const API_BASE = "https://numerology-ai-insights.onrender.com";
 
 const NUMBER_LABELS = {
   life_path_number: "Life Path",
