@@ -5,9 +5,7 @@ python-dotenv
 streamlit
 google-generativeai
 langchain-community
-langchain-google-genai
-langchain-huggingface
-sentence-transformers
+fastembed
 fpdf2
 fastapi
 uvicorn

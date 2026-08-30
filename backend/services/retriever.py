@@ -1,15 +1,19 @@
 """
 Retrieval service — searches the ChromaDB knowledge base for content
 relevant to a given query or number, and returns it as context for Gemini.
+
+Uses FastEmbed (ONNX-based, no PyTorch dependency) instead of
+sentence-transformers — significantly lighter memory footprint, which
+matters on memory-constrained free hosting tiers (e.g. Render's 512MB cap).
 """
 
 import os
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_community.vectorstores import Chroma
 
 CHROMA_PERSIST_DIR = os.path.join(os.path.dirname(__file__), "..", "chroma_db")
 
-_embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+_embeddings = FastEmbedEmbeddings(model_name="BAAI/bge-small-en-v1.5")
 
 _vectorstore = Chroma(
     persist_directory=CHROMA_PERSIST_DIR,

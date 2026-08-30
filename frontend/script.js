@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8000";
+const API_BASE = "http://localhost:8001";
 
 const NUMBER_LABELS = {
   life_path_number: "Life Path",

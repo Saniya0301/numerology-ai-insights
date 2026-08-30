@@ -3,7 +3,7 @@ FastAPI backend for Numerology AI Insights.
 Wraps the existing numerology, RAG, and PDF services as HTTP endpoints
 for the React/Next.js frontend to call.
 
-Run with: uvicorn api:app --reload --port 8000
+Run with: uvicorn api:app --reload --port 8001
 """
 
 from fastapi import FastAPI, HTTPException
@@ -56,9 +56,9 @@ def ensure_knowledge_base_ready():
     needs_ingestion = True
     try:
         from langchain_community.vectorstores import Chroma
-        from langchain_huggingface import HuggingFaceEmbeddings
+        from langchain_community.embeddings import FastEmbedEmbeddings
 
-        embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+        embeddings = FastEmbedEmbeddings(model_name="BAAI/bge-small-en-v1.5")
         vectorstore = Chroma(
             persist_directory=CHROMA_PERSIST_DIR,
             embedding_function=embeddings,
