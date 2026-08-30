@@ -1,0 +1,12 @@
+langchain
+langchain-google-genai
+chromadb
+python-dotenv
+streamlit
+google-generativeai
+langchain-community
+fastembed
+fpdf2
+fastapi
+uvicorn
+python-multipart
