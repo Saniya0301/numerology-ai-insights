@@ -1,0 +1,14 @@
+langchain
+langchain-google-genai
+chromadb
+python-dotenv
+streamlit
+google-generativeai
+langchain-community
+langchain-google-genai
+langchain-huggingface
+sentence-transformers
+fpdf2
+fastapi
+uvicorn
+python-multipart

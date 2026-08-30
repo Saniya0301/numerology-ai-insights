@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Numerology AI Insights</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark">✦</span>
+        <span class="brand-name">Numerology AI Insights</span>
+      </div>
+      <nav class="main-nav">
+        <button class="nav-link active" data-tab="profile-tab">My Profile</button>
+        <button class="nav-link" data-tab="compatibility-tab">Compatibility</button>
+        <button class="nav-link" data-tab="booking-tab">Book a Reading</button>
+        <button class="nav-link" data-tab="courses-tab">Courses</button>
+        <button class="nav-link" data-tab="library-tab">Library</button>
+        <button class="nav-link" data-tab="shop-tab">Shop</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ============ PROFILE TAB ============ -->
+    <section id="profile-tab" class="tab-panel active">
+
+      <div class="hero">
+        <h1>Understand the patterns behind your numbers.</h1>
+        <p>Discover your personality, strengths, relationships, career tendencies, and current cycle — interpreted with AI.</p>
+      </div>
+
+      <form id="profile-form" class="card form-card">
+        <div class="field">
+          <label for="full_name">Full Birth Name</label>
+          <input type="text" id="full_name" required placeholder="e.g. Saniya Chhabra" />
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="day">Day</label>
+            <input type="number" id="day" min="1" max="31" required />
+          </div>
+          <div class="field">
+            <label for="month">Month</label>
+            <input type="number" id="month" min="1" max="12" required />
+          </div>
+          <div class="field">
+            <label for="year">Year</label>
+            <input type="number" id="year" min="1900" max="2026" required />
+          </div>
+        </div>
+        <button type="submit" class="btn-primary">Generate My Profile</button>
+      </form>
+
+      <div id="profile-loading" class="loading-state hidden">
+        <div class="spinner"></div>
+        <p>Calculating your numbers...</p>
+      </div>
+
+      <div id="profile-results" class="hidden">
+
+        <h2 class="section-title">Your Numerology Profile</h2>
+        <div id="number-grid" class="number-grid"></div>
+
+        <details class="card breakdown-card">
+          <summary>🔍 How was my Life Path Number calculated?</summary>
+          <div id="breakdown-content"></div>
+        </details>
+
+        <h2 class="section-title">⭐ Pinnacle Cycles</h2>
+        <p class="section-caption">Four life phases, each with a dominant theme to build on.</p>
+        <div id="pinnacle-grid" class="cycle-grid"></div>
+
+        <h2 class="section-title">⚡ Challenge Cycles</h2>
+        <p class="section-caption">Recurring lessons or obstacles across the same life phases.</p>
+        <div id="challenge-grid" class="cycle-grid"></div>
+
+        <h2 class="section-title">🧭 Karmic Lessons</h2>
+        <p id="karmic-text" class="card"></p>
+
+        <div id="life-areas-loading" class="loading-state hidden">
+          <div class="spinner"></div>
+          <p>Generating your AI-powered life areas... this can take up to a minute.</p>
+        </div>
+
+        <div id="life-areas-section" class="hidden">
+          <h2 class="section-title">✨ Your AI-Powered Life Areas</h2>
+          <div class="area-tabs" id="area-tab-buttons"></div>
+          <div class="card area-content" id="area-content"></div>
+          <p class="disclaimer">Numerology is an interpretive, reflective practice for self-discovery — not a scientific or predictive science, nor a substitute for professional medical, legal, or financial advice.</p>
+
+          <button id="download-pdf-btn" class="btn-secondary">📄 Download Full PDF Report</button>
+        </div>
+
+        <div class="card chat-card">
+          <h2 class="section-title">💬 Ask Your Numbers</h2>
+          <div id="chat-messages"></div>
+          <form id="chat-form" class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Ask something about your numbers..." required />
+            <button type="submit" class="btn-primary">Send</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ COMPATIBILITY TAB ============ -->
+    <section id="compatibility-tab" class="tab-panel">
+      <div class="hero">
+        <h1>Compare two numerology profiles.</h1>
+        <p>See how two people's numbers may complement — or challenge — each other.</p>
+      </div>
+
+      <form id="compatibility-form" class="card form-card">
+        <h3>Person A</h3>
+        <div class="field">
+          <label for="name_a">Full Birth Name</label>
+          <input type="text" id="name_a" required />
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="day_a">Day</label><input type="number" id="day_a" min="1" max="31" required /></div>
+          <div class="field"><label for="month_a">Month</label><input type="number" id="month_a" min="1" max="12" required /></div>
+          <div class="field"><label for="year_a">Year</label><input type="number" id="year_a" min="1900" max="2026" required /></div>
+        </div>
+
+        <h3>Person B</h3>
+        <div class="field">
+          <label for="name_b">Full Birth Name</label>
+          <input type="text" id="name_b" required />
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="day_b">Day</label><input type="number" id="day_b" min="1" max="31" required /></div>
+          <div class="field"><label for="month_b">Month</label><input type="number" id="month_b" min="1" max="12" required /></div>
+          <div class="field"><label for="year_b">Year</label><input type="number" id="year_b" min="1900" max="2026" required /></div>
+        </div>
+
+        <button type="submit" class="btn-primary">Check Compatibility</button>
+      </form>
+
+      <div id="compat-loading" class="loading-state hidden">
+        <div class="spinner"></div>
+        <p>Calculating compatibility...</p>
+      </div>
+
+      <div id="compat-results" class="hidden">
+        <div class="compat-score-hero">
+          <div class="compat-score-number" id="compat-overall-score">--%</div>
+          <p>Overall Compatibility</p>
+        </div>
+        <div class="number-grid" id="compat-score-grid"></div>
+        <div class="card" id="compat-explanation"></div>
+        <p class="disclaimer">Numerology compatibility is an interpretive, reflective practice — not a definitive measure of relationship success or failure.</p>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING TAB ============ -->
+    <section id="booking-tab" class="tab-panel">
+      <div class="hero">
+        <h1>Book a personal reading.</h1>
+        <p>Choose a service, pick a time that works for you, and we'll confirm your session directly.</p>
+      </div>
+
+      <div class="service-grid" id="service-grid"></div>
+
+      <form id="booking-form" class="card form-card hidden">
+        <h3 id="booking-selected-service"></h3>
+        <div class="field-row">
+          <div class="field">
+            <label for="preferred_date">Preferred Date</label>
+            <input type="date" id="preferred_date" required />
+          </div>
+          <div class="field">
+            <label for="preferred_time">Preferred Time</label>
+            <input type="time" id="preferred_time" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="booking_name">Your Name</label>
+          <input type="text" id="booking_name" required />
+        </div>
+        <div class="field">
+          <label for="booking_contact">Phone or Email</label>
+          <input type="text" id="booking_contact" required />
+        </div>
+        <div class="field">
+          <label for="booking_notes">Anything you'd like us to know? (optional)</label>
+          <textarea id="booking_notes" rows="3"></textarea>
+        </div>
+        <p class="info-banner">💳 Payment details will be shared once your booking is confirmed — no payment is required to submit a request.</p>
+        <button type="submit" class="btn-primary">Request Booking</button>
+      </form>
+
+      <div id="booking-success" class="card hidden">
+        <h3>Your booking request has been sent!</h3>
+        <p>We'll reach out shortly to confirm your session and share payment details.</p>
+      </div>
+    </section>
+
+    <!-- ============ COURSES TAB ============ -->
+    <section id="courses-tab" class="tab-panel">
+      <div class="hero">
+        <h1>Occult Academy</h1>
+        <p>Learn. Practice. Master. Structured courses in numerology and beyond.</p>
+      </div>
+      <div id="courses-content"></div>
+    </section>
+
+    <!-- ============ LIBRARY TAB ============ -->
+    <section id="library-tab" class="tab-panel">
+      <div class="hero">
+        <h1>The Occult Library</h1>
+        <p>Ancient wisdom, reimagined for the modern seeker.</p>
+      </div>
+      <div id="library-content"></div>
+    </section>
+
+    <!-- ============ SHOP TAB ============ -->
+    <section id="shop-tab" class="tab-panel">
+      <div class="hero">
+        <h1>Spiritual tools for your practice.</h1>
+        <p>Rudraksha, crystals, and yantras to support your numerology journey.</p>
+      </div>
+      <p class="info-banner">📸 Product photos below are placeholders. Real product images will be added once sourced from suppliers or original photography.</p>
+      <div id="shop-content"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Numerology AI Insights. For reflection and self-discovery — not professional advice.</p>
+  </footer>
+
+  <!-- Enquiry Modal -->
+  <div id="enquiry-modal" class="modal hidden">
+    <div class="modal-content card">
+      <button class="modal-close" id="modal-close-btn">&times;</button>
+      <h3 id="enquiry-product-name"></h3>
+      <form id="enquiry-form">
+        <div class="field">
+          <label for="enquiry_name">Your Name</label>
+          <input type="text" id="enquiry_name" required />
+        </div>
+        <div class="field">
+          <label for="enquiry_contact">Phone or Email</label>
+          <input type="text" id="enquiry_contact" required />
+        </div>
+        <div class="field">
+          <label for="enquiry_message">Message (optional)</label>
+          <textarea id="enquiry_message" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Submit Enquiry</button>
+      </form>
+      <p id="enquiry-success" class="hidden">Thank you! Your enquiry has been recorded — we'll be in touch soon.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
