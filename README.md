@@ -68,23 +68,16 @@ long-form PDF report.
 
 ## ✦ Product Experience
 
-<p align="center">
-  <img src="docs/screenshots/dashboard.png" width="90%" alt="Numerology AI Insights Dashboard">
-</p>
 
-<p align="center">
-  <em>Personalized numerology analysis powered by AI.</em>
-</p>
 
-<br>
 
-<table>
-<tr>
-<td width="50%">
+
+
 
 ### ✦ Personal Profile
 
-<img src="docs/screenshots/profile.png" width="100%" alt="Numerology Profile">
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e0ac10cd-7022-4619-b787-99c117c95335" />
+
 
 </td>
 
@@ -92,7 +85,8 @@ long-form PDF report.
 
 ### ✦ Life Analysis
 
-<img src="docs/screenshots/life-areas.png" width="100%" alt="Life Areas Analysis">
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ba58f752-cfa5-4341-88ba-f7638925ccce" />
+
 
 </td>
 </tr>
@@ -102,7 +96,8 @@ long-form PDF report.
 
 ### ✦ Compatibility
 
-<img src="docs/screenshots/compatibility.png" width="100%" alt="Compatibility Analysis">
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/47f5df4a-8d74-4ac9-861b-b95e65b94cea" />
+
 
 </td>
 
@@ -110,11 +105,13 @@ long-form PDF report.
 
 ### ✦ AI Questioning
 
-<img src="docs/screenshots/ai-chat.png" width="100%" alt="AI Numerology Questions">
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bd6109b4-08d8-47c6-bf6c-5c2da2f4f0f7" />
+
 
 </td>
 </tr>
 </table>
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/29f48c26-8651-46e1-b66c-ec488c082d6d" />
 
 ## ✦ What Makes It Different?
 
