@@ -3,7 +3,7 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
 <p align="center">
-  <a href="https://numerology-ai-insights.onrender.com"
+  <a href= https://numerology-ai-insights.onrender.com
     <img src="https://capsule-render.vercel.app/api?type=rect&color=0:022C22,45:064E3B,100:10B981&height=210&section=header&text=Numerology%20AI%20Insights&fontSize=44&fontColor=FFFFFF&fontAlignY=43&desc=AI-Powered%20Numerology%20%7C%20Personalized%20Insights%20%7C%20RAG&descSize=17&descAlignY=64&descColor=D1FAE5" width="100%"/>
   </a>
 </p>
