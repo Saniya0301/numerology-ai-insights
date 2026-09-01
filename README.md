@@ -1,9 +1,11 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
+
 <!--                    NUMEROLOGY AI INSIGHTS                      -->
+
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
 <p align="center">
-  <a href= https://numerology-ai-insights.onrender.com
+  <a href="https://numerology-ai-insights.onrender.com">
     <img src="https://capsule-render.vercel.app/api?type=rect&color=0:022C22,45:064E3B,100:10B981&height=210&section=header&text=Numerology%20AI%20Insights&fontSize=44&fontColor=FFFFFF&fontAlignY=43&desc=AI-Powered%20Numerology%20%7C%20Personalized%20Insights%20%7C%20RAG&descSize=17&descAlignY=64&descColor=D1FAE5" width="100%"/>
   </a>
 </p>
@@ -20,7 +22,7 @@
 
 <p align="center">
 
-  <a href="https://numerology-ai-insights-demo.onrender.com">
+  <a href="https://numerology-ai-insights.onrender.com">
     <img src="https://img.shields.io/badge/%E2%9C%A8%20LIVE%20DEMO-10B981?style=for-the-badge&logoColor=white" alt="Live Demo"/>
   </a>
 
@@ -35,38 +37,43 @@
 
 </p>
 
----
+🌿 Overview
 
-## 🌿 Overview
-
-**Numerology AI Insights** is a full-stack AI application designed to transform
+Numerology AI Insights is a full-stack AI application designed to transform
 numerological calculations into a structured, personalized digital experience.
 
-The platform accepts a user's **full name and date of birth**, calculates multiple
+The platform accepts a user's full name and date of birth, calculates multiple
 numerological indicators, retrieves relevant knowledge from a curated knowledge base,
 and uses AI to generate contextual interpretations.
 
 Rather than presenting isolated numbers, the application connects those numbers to
 different areas of life including:
 
-- Career & professional direction
-- Money & financial tendencies
-- Love & relationships
-- Personality & behavioral patterns
-- Strengths & challenges
-- Personal growth
-- Yearly themes
-- Compatibility
-- Karmic influences
-- Pinnacle cycles
+Career & professional direction
+
+Money & financial tendencies
+
+Love & relationships
+
+Personality & behavioral patterns
+
+Strengths & challenges
+
+Personal growth
+
+Yearly themes
+
+Compatibility
+
+Karmic influences
+
+Pinnacle cycles
 
 The platform also provides a conversational space where users can ask
 questions about their individual profile and generate a detailed,
 long-form PDF report.
 
----
-
-## ✦ Product Experience
+✦ Product Experience
 
 
 
@@ -74,19 +81,17 @@ long-form PDF report.
 
 
 
-### ✦ Personal Profile
+✦ Personal Profile
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e0ac10cd-7022-4619-b787-99c117c95335" />
-
 
 </td>
 
 <td width="50%">
 
-### ✦ Life Analysis
+✦ Life Analysis
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ba58f752-cfa5-4341-88ba-f7638925ccce" />
-
 
 </td>
 </tr>
@@ -94,32 +99,29 @@ long-form PDF report.
 <tr>
 <td width="50%">
 
-### ✦ Compatibility
+✦ Compatibility
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/47f5df4a-8d74-4ac9-861b-b95e65b94cea" />
-
 
 </td>
 
 <td width="50%">
 
-### ✦ AI Questioning
+✦ AI Questioning
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bd6109b4-08d8-47c6-bf6c-5c2da2f4f0f7" />
-
 
 </td>
 </tr>
 </table>
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/29f48c26-8651-46e1-b66c-ec488c082d6d" />
 
-## ✦ What Makes It Different?
+✦ What Makes It Different?
 
 Traditional numerology applications generally stop after calculating a few numbers.
 
-**Numerology AI Insights goes further.**
+Numerology AI Insights goes further.
 
-```text
 Name + Date of Birth
         │
         ▼
@@ -425,10 +427,10 @@ numerology-ai-insights/
 ├── .gitignore
 └── README.md
 🚀 Live Demo
-<p align="center"> <a href="https://numerology-ai-insights-demo.onrender.com"> <img src="https://img.shields.io/badge/%E2%9C%A8%20OPEN%20LIVE%20DEMO-10B981?style=for-the-badge&logoColor=white"/> </a> </p>
+<p align="center"> <a href="https://numerology-ai-insights.onrender.com"> <img src="https://img.shields.io/badge/%E2%9C%A8%20OPEN%20LIVE%20DEMO-10B981?style=for-the-badge&logoColor=white"/> </a> </p>
 Frontend
 
-https://numerology-ai-insights-demo.onrender.com
+https://numerology-ai-insights.onrender.com
 
 Source Code
 
@@ -586,7 +588,7 @@ AI-powered numerology intelligence platform combining personalized numerological
 
 Website
 
-https://numerology-ai-insights-demo.onrender.com
+https://numerology-ai-insights.onrender.com
 -----
 Topics
 
@@ -600,4 +602,3 @@ chromadb
 numerology
 python
 javascript
-
