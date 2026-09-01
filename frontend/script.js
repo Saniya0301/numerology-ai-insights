@@ -1,4 +1,4 @@
-const API_BASE = "https://numerology-ai-insights-demo.onrender.com";
+const API_BASE = ""; // same-origin — frontend and backend are served from the same Render service
 
 const NUMBER_LABELS = {
   life_path_number: "Life Path",
