@@ -122,64 +122,55 @@ Traditional numerology applications generally stop after calculating a few numbe
 
 Numerology AI Insights goes further.
 
-Name + Date of Birth
-        │
-        ▼
-┌──────────────────────┐
-│ Numerological Engine │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│ Knowledge Retrieval  │
-│       + RAG          │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│      Gemini AI       │
-└──────────┬───────────┘
-           │
-           ▼
-┌─────────────────────────────────┐
-│ Personalized Life Interpretation│
-└──────────┬──────────────────────┘
-           │
-     ┌─────┼─────────┬─────────┐
-     ▼     ▼         ▼         ▼
-   Profile Career   Love     Report
-     │
-     ▼
- Compatibility + AI Q&A
-
-
-
----------
-
+flowchart TD
+    A[Name + Date of Birth] --> B[Numerological Engine]
+    B --> C[Knowledge Retrieval + RAG]
+    C --> D[Gemini AI]
+    D --> E[Personalized Life Interpretation]
+    E --> F[Profile]
+    E --> G[Career]
+    E --> H[Love]
+    E --> I[Report]
+    E --> J[Compatibility + AI Q&A]
 
 01 — Personal Numerology Profile
 
 Enter:
 
 Full birth name
+
 Day of birth
+
 Month of birth
+
 Year of birth
 
 The application calculates and presents a comprehensive numerical profile.
 
-Includes
+Includes:
+
 Life Path Number
+
 Expression / Destiny Number
+
 Soul Urge Number
+
 Personality Number
+
 Birthday Number
+
 Personal Year Number
+
 Maturity Number
+
 Karmic Lessons
+
 Pinnacle Cycles
+
 Challenges
+
 Life Path breakdown
+
 02 — Personalized Life Analysis
 
 The generated profile is interpreted across multiple life dimensions.
@@ -189,37 +180,57 @@ The generated profile is interpreted across multiple life dimensions.
 Explore:
 
 Career tendencies
+
 Professional strengths
+
 Work patterns
+
 Potential career environments
+
 Growth areas
+
 💰 Money & Finance
 
 Explore:
 
 Financial tendencies
+
 Relationship with money
+
 Strengths around wealth creation
+
 Potential financial challenges
+
 Growth-oriented patterns
+
 ❤️ Love & Relationships
 
 Explore:
 
 Relationship tendencies
+
 Emotional patterns
+
 Communication styles
+
 Strengths in relationships
+
 Potential challenges
+
 🌱 Personal Growth
 
 Explore:
 
 Strengths
+
 Challenges
+
 Growth themes
+
 Behavioral tendencies
+
 Areas requiring conscious development
+
 🔢 Advanced Numerological Calculations
 
 The platform goes beyond basic Life Path calculations.
@@ -278,11 +289,17 @@ an AI-assisted compatibility interpretation.
 The analysis can explore areas such as:
 
 Personality dynamics
+
 Relationship tendencies
+
 Strengths
+
 Potential friction points
+
 Communication
+
 Emotional compatibility
+
 Long-term dynamics
 
 The goal is not simply to produce a compatibility score,
@@ -295,22 +312,38 @@ One of the platform's major features is its detailed PDF report generation.
 Instead of producing a short summary, the application generates a
 long-form report of approximately 20 pages, depending on the profile.
 
-Report can include
+Report can include:
+
 Core numerology profile
+
 Life Path analysis
+
 Destiny / Expression analysis
+
 Soul Urge
+
 Personality
+
 Birthday influence
+
 Maturity
+
 Karmic Lessons
+
 Pinnacle cycles
+
 Challenges
+
 Career
+
 Money & finance
+
 Love & relationships
+
 Personal growth
+
 Personal Year
+
 AI-generated interpretations
 
 This turns the generated analysis into a portable, structured personal report.
@@ -332,74 +365,79 @@ A curated numerology knowledge base is processed and indexed so that
 relevant information can be retrieved during generation.
 
 Pipeline
-Knowledge Base
-      │
-      ▼
-Document Loading
-      │
-      ▼
-Text Chunking
-      │
-      ▼
-Embeddings
-      │
-      ▼
-ChromaDB
-      │
-      ▼
-Semantic Retrieval
-      │
-      ▼
-Gemini
-      │
-      ▼
-Context-Aware Response
+
+flowchart LR
+    A[Knowledge Base] --> B[Document Loading]
+    B --> C[Text Chunking]
+    C --> D[Embeddings]
+    D --> E[ChromaDB]
+    E --> F[Semantic Retrieval]
+    F --> G[Gemini]
+    G --> H[Context-Aware Response]
 
 This architecture helps ground generated interpretations in the
 application's domain-specific knowledge.
 
 🏗️ System Architecture
-                         ┌─────────────────────┐
-                         │     User / Client   │
-                         └──────────┬──────────┘
-                                    │
-                                    ▼
-                    ┌─────────────────────────────┐
-                    │     HTML / CSS / JavaScript │
-                    │          Frontend           │
-                    └─────────────┬───────────────┘
-                                  │ REST API
-                                  ▼
-                    ┌─────────────────────────────┐
-                    │          FastAPI             │
-                    │           Backend            │
-                    └─────────────┬───────────────┘
-                                  │
-                    ┌─────────────┼─────────────┐
-                    ▼             ▼             ▼
-             ┌──────────┐  ┌───────────┐  ┌───────────┐
-             │Numerology│  │   RAG /   │  │   PDF     │
-             │ Engine   │  │ ChromaDB  │  │ Generator │
-             └────┬─────┘  └─────┬─────┘  └───────────┘
-                  │              │
-                  └──────┬───────┘
-                         ▼
-                  ┌──────────────┐
-                  │  Gemini AI   │
-                  └──────────────┘
+
+flowchart TD
+    A[User / Client] --> B[HTML / CSS / JavaScript Frontend]
+    B -->|REST API| C[FastAPI Backend]
+    C --> D[Numerology Engine]
+    C --> E[RAG / ChromaDB]
+    C --> F[PDF Generator]
+    D --> G[Gemini AI]
+    E --> G
+    G --> H[Personalized AI Response]
+
 🛠️ Technology Stack
-Layer	Technology
-Frontend	HTML5, CSS3, JavaScript
-Backend	Python, FastAPI
-AI	Google Gemini
-RAG	LangChain
-Vector Database	ChromaDB
-Embeddings	Sentence Transformers
-PDF Generation	Python PDF generation pipeline
-API	REST
-Deployment	Render
-Version Control	Git + GitHub
+
+Layer
+
+Technology
+
+Frontend
+
+HTML5, CSS3, JavaScript
+
+Backend
+
+Python, FastAPI
+
+AI
+
+Google Gemini
+
+RAG
+
+LangChain
+
+Vector Database
+
+ChromaDB
+
+Embeddings
+
+Sentence Transformers
+
+PDF Generation
+
+Python PDF generation pipeline
+
+API
+
+REST
+
+Deployment
+
+Render
+
+Version Control
+
+Git + GitHub
+
 📁 Project Structure
+
 numerology-ai-insights/
 │
 ├── backend/
@@ -426,14 +464,19 @@ numerology-ai-insights/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-🚀 Live Demo
-<p align="center"> <a href="https://numerology-ai-insights.onrender.com"> <img src="https://img.shields.io/badge/%E2%9C%A8%20OPEN%20LIVE%20DEMO-10B981?style=for-the-badge&logoColor=white"/> </a> </p>
-Frontend
 
+🚀 Live Demo
+
+<p align="center">
+  <a href="https://numerology-ai-insights.onrender.com">
+    <img src="https://img.shields.io/badge/%E2%9C%A8%20OPEN%20LIVE%20DEMO-10B981?style=for-the-badge&logoColor=white" alt="Open Live Demo"/>
+  </a>
+</p>
+
+Live Application:
 https://numerology-ai-insights.onrender.com
 
-Source Code
-
+Source Code:
 https://github.com/Saniya0301/numerology-ai-insights
 
 The application is deployed using Render's free tier. Free-tier services
@@ -441,21 +484,28 @@ may spin down after periods of inactivity, so the first request after
 inactivity can take longer to respond.
 
 ⚙️ Local Installation
+
 1. Clone the repository
+
 git clone https://github.com/Saniya0301/numerology-ai-insights.git
 cd numerology-ai-insights
+
 2. Create a virtual environment
+
 Windows
+
 python -m venv .venv
-
-Activate it:
-
 .venv\Scripts\activate
+
 macOS / Linux
+
 python3 -m venv .venv
 source .venv/bin/activate
+
 3. Install dependencies
+
 pip install -r requirements.txt
+
 🔐 Environment Variables
 
 Create a .env file according to the variables expected by the backend.
@@ -474,7 +524,7 @@ environment files from being tracked.
 From the project root:
 
 cd backend
-uvicorn api:app --reload --port 8000
+uvicorn api --reload --port 8000
 
 The API will be available at:
 
@@ -503,8 +553,6 @@ question answering, and report generation.
 The backend is designed as a service layer between the browser-based
 frontend and the numerology / AI systems.
 
-
-----
 🔒 Security Considerations
 
 API keys are intentionally kept outside the frontend.
@@ -519,23 +567,18 @@ frontend/script.js
 or any other browser-accessible file.
 
 📈 Deployment Architecture
----
-                    GitHub
-                       │
-            ┌──────────┴──────────┐
-            ▼                     ▼
-     Render Static Site      Render Web Service
-            │                     │
-            ▼                     ▼
-       HTML/CSS/JS             FastAPI
-                                  │
-                         ┌────────┼────────┐
-                         ▼        ▼        ▼
-                      Gemini    RAG     PDF Engine
-                               │
-                               ▼
-                            ChromaDB
+
+flowchart LR
+    A[GitHub] --> B[Render Static Site]
+    A --> C[Render Web Service]
+    B --> D[HTML / CSS / JavaScript]
+    C --> E[FastAPI]
+    E --> F[Gemini]
+    E --> G[RAG / ChromaDB]
+    E --> H[PDF Engine]
+
 🧪 Development Workflow
+
 # Check repository
 git status
 
@@ -551,7 +594,6 @@ git push
 Render automatically deploys the latest version from the configured
 GitHub branch.
 
-----
 🎯 Product Vision
 
 Numerology AI Insights explores how traditional numerological systems
@@ -563,42 +605,42 @@ AI-powered personal guidance ecosystem with richer personalization,
 knowledge retrieval, digital products, and intelligent conversational
 experiences.
 
-
------
 👩‍💻 Developer
 
 Saniya Chhabra
-
 AI & Data Science Developer
+
 Generative AI • RAG • LLM Applications • Full-Stack AI
 
-<p align="center"> <a href="https://github.com/Saniya0301"> <img src="https://img.shields.io/badge/GitHub-Saniya0301-064E3B?style=for-the-badge&logo=github&logoColor=white"/> </a> </p>
-<p align="center"> <strong>Numerology AI Insights</strong> <br/> <em>Where numerical patterns meet intelligent interpretation.</em> </p> <p align="center"> Built with Python · FastAPI · Gemini · RAG · ChromaDB · JavaScript </p> ```
-✨ One thing I'd change before you publish it
+<p align="center">
+  <a href="https://github.com/Saniya0301">
+    <img src="https://img.shields.io/badge/GitHub-Saniya0301-064E3B?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+</p>
 
-Your current GitHub repo's About section says “No description, website, or topics provided.”
+<p align="center">
+  <strong>Numerology AI Insights</strong><br/>
+  <em>Where numerical patterns meet intelligent interpretation.</em>
+</p>
 
-That's a missed opportunity for a portfolio project.
+<p align="center">
+  Built with Python · FastAPI · Gemini · RAG · ChromaDB · JavaScript
+</p>
 
-On GitHub, click About → ⚙️ Edit, and use:
+<p align="center">
+  <strong>✨ Numerology AI Insights</strong><br/>
+  AI-powered numerological analysis, personalized insights, and intelligent guidance.
+</p>
 
-Description
+<p align="center">
+  <a href="https://numerology-ai-insights.onrender.com">
+    <strong>🚀 Live Demo</strong>
+  </a>
+  &nbsp; • &nbsp;
+  <a href="https://github.com/Saniya0301/numerology-ai-insights">
+    <strong>💻 Source Code</strong>
+  </a>
+</p>
 
-AI-powered numerology intelligence platform combining personalized numerological analysis, RAG, Gemini AI, compatibility insights, conversational Q&A, and long-form PDF reports.
-
-Website
-
-https://numerology-ai-insights.onrender.com
------
-Topics
-
-artificial-intelligence
-generative-ai
-gemini
-fastapi
-rag
-langchain
-chromadb
-numerology
-python
-javascript
+<p align="center">
+  ⭐ If you found this project interesting, consider giving it a
